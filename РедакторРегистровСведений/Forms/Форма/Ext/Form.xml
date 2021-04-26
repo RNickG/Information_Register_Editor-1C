@@ -17,7 +17,7 @@
 			</Events>
 		</InputField>
 		<UsualGroup name="ОсновнаяГруппа" id="20">
-			<Group>AlwaysHorizontal</Group>
+			<Group>Horizontal</Group>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ОсновнаяГруппаРасширеннаяПодсказка" id="21"/>
 			<ChildItems>
@@ -63,7 +63,7 @@
 											<v8:content>Группа опции обработки</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОпцииОбработкиРасширеннаяПодсказка" id="83"/>
@@ -112,7 +112,7 @@
 											<v8:content>Группа вид обработки</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>AlwaysHorizontal</Group>
+									<Group>Horizontal</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаВидОбработкиРасширеннаяПодсказка" id="85"/>
@@ -633,6 +633,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьПоТекущейСтроке</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьОбработку" id="2">
 			<Title>
@@ -648,6 +649,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьОбработку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьРезультатОтбора" id="3">
 			<Title>
@@ -663,6 +665,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьРезультатОтбора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИспользоватьВсеВключить" id="4">
 			<Title>
@@ -683,6 +686,7 @@
 			</Picture>
 			<Action>ИспользоватьВсеВключить</Action>
 			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтборЗаполнитьПоТекущейСтроке" id="5">
 			<Title>
@@ -698,6 +702,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтборЗаполнитьПоТекущейСтроке</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьРедакторКода" id="6">
 			<Title>
@@ -713,6 +718,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьРедакторКода</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИспользоватьВсеВыключить" id="7">
 			<Title>
@@ -732,6 +738,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ИспользоватьВсеВыключить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
