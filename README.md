@@ -6,3 +6,5 @@
 - Создание, удаление записей
 - Изменение реквизитов набора записей, сформированного по произвольному отбору
 - Выполнение произвольного алгоритма обработки для каждой изменяемой записи
+
+[![GitHub release](https://img.shields.io/github/release/RNickG/Information_Register_Editor-1C?style=flat-square)](https://github.com/RNickG/Information_Register_Editor-1C/release)[![GitHub issues](https://img.shields.io/github/issues/RNickG/Information_Register_Editor-1C?style=flat-square)](https://github.com/RNickG/Information_Register_Editor-1C/issues)
