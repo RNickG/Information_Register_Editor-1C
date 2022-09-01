@@ -7,6 +7,18 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
+		<LabelDecoration name="Инструкция" id="4">
+			<Height>2</Height>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование: Запись.&lt;Свойство&gt; = ...
+Выполняется для каждой записи из набора по условиям отбора.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнструкцияКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="6"/>
+		</LabelDecoration>
 		<InputField name="Алгоритм" id="1">
 			<DataPath>Алгоритм</DataPath>
 			<Width>50</Width>

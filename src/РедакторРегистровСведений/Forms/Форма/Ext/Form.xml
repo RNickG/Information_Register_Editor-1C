@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
@@ -9,6 +12,7 @@
 	<ChildItems>
 		<InputField name="ИмяРС" id="17">
 			<DataPath>ИмяРегистраСведений</DataPath>
+			<HorizontalStretch>true</HorizontalStretch>
 			<ListChoiceMode>true</ListChoiceMode>
 			<ContextMenu name="ИмяРСКонтекстноеМеню" id="18"/>
 			<ExtendedTooltip name="ИмяРСРасширеннаяПодсказка" id="19"/>
@@ -21,8 +25,104 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ОсновнаяГруппаРасширеннаяПодсказка" id="21"/>
 			<ChildItems>
+				<Table name="ЭлементСписокРС" id="92">
+					<UseAlternationRowColor>true</UseAlternationRowColor>
+					<EnableStartDrag>true</EnableStartDrag>
+					<DataPath>ДинамическийСписокРС</DataPath>
+					<RowPictureDataPath>ДинамическийСписокРС.DefaultPicture</RowPictureDataPath>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<ContextMenu name="ЭлементСписокРСКонтекстноеМеню" id="93"/>
+					<AutoCommandBar name="ЭлементСписокРСКоманднаяПанель" id="94">
+						<ChildItems>
+							<Popup name="ЭлементСписокРСГруппа1" id="107">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выгрузить в XML</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Элемент список РСГруппа1</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ЭлементСписокРСГруппа1РасширеннаяПодсказка" id="108"/>
+								<ChildItems>
+									<Button name="ЭлементСписокРСВыгрузитьВXML" id="90">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыгрузитьВXML</CommandName>
+										<ExtendedTooltip name="ЭлементСписокРСВыгрузитьВXMLРасширеннаяПодсказка" id="91"/>
+									</Button>
+									<Button name="ЭлементСписокРСВыгрузитьВXMLПоОтбору" id="109">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыгрузитьВXMLПоОтбору</CommandName>
+										<ExtendedTooltip name="ЭлементСписокРСВыгрузитьВXMLПоОтборуРасширеннаяПодсказка" id="110"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="ЭлементСписокРСЗагрузитьИзXML" id="105">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗагрузитьИзXML</CommandName>
+								<ExtendedTooltip name="ЭлементСписокРСЗагрузитьИзXMLРасширеннаяПодсказка" id="106"/>
+							</Button>
+							<Button name="ЭлементСписокРСОтчетПоДаннымРегистра" id="115">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтчетПоДаннымРегистра</CommandName>
+								<ExtendedTooltip name="ЭлементСписокРСОтчетПоДаннымРегистраРасширеннаяПодсказка" id="116"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЭлементСписокРСРасширеннаяПодсказка" id="95"/>
+					<SearchStringAddition name="ЭлементСписокРССтрокаПоиска" id="96">
+						<AdditionSource>
+							<Item>ЭлементСписокРС</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭлементСписокРССтрокаПоискаКонтекстноеМеню" id="97"/>
+						<ExtendedTooltip name="ЭлементСписокРССтрокаПоискаРасширеннаяПодсказка" id="98"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЭлементСписокРССостояниеПросмотра" id="99">
+						<AdditionSource>
+							<Item>ЭлементСписокРС</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭлементСписокРССостояниеПросмотраКонтекстноеМеню" id="100"/>
+						<ExtendedTooltip name="ЭлементСписокРССостояниеПросмотраРасширеннаяПодсказка" id="101"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЭлементСписокРСУправлениеПоиском" id="102">
+						<AdditionSource>
+							<Item>ЭлементСписокРС</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЭлементСписокРСУправлениеПоискомКонтекстноеМеню" id="103"/>
+						<ExtendedTooltip name="ЭлементСписокРСУправлениеПоискомРасширеннаяПодсказка" id="104"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">ДинамическийСписокРСВыбор</Event>
+					</Events>
+				</Table>
 				<UsualGroup name="ГруппаЭлементыРеквизитыРС" id="22">
 					<Visible>false</Visible>
+					<EnableContentChange>true</EnableContentChange>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструменты</v8:content>
+						</v8:item>
+					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -30,7 +130,14 @@
 						</v8:item>
 					</ToolTip>
 					<Group>Vertical</Group>
-					<ShowTitle>false</ShowTitle>
+					<Behavior>Collapsible</Behavior>
+					<CollapsedRepresentationTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>...</v8:content>
+						</v8:item>
+					</CollapsedRepresentationTitle>
+					<ControlRepresentation>Picture</ControlRepresentation>
 					<ExtendedTooltip name="ГруппаЭлементыРеквизитыРСРасширеннаяПодсказка" id="23"/>
 					<ChildItems>
 						<UsualGroup name="ГруппаОбработка" id="43">
@@ -46,10 +153,139 @@
 									<v8:content>Группа обработка</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Vertical</Group>
+							<Group>AlwaysHorizontal</Group>
 							<BackColor>web:Beige</BackColor>
 							<ExtendedTooltip name="ГруппаОбработкаРасширеннаяПодсказка" id="44"/>
 							<ChildItems>
+								<UsualGroup name="Группа1" id="113">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="114"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПроизвольныйАлгоритм" id="111">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа произвольный алгоритм</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа произвольный алгоритм</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроизвольныйАлгоритмРасширеннаяПодсказка" id="112"/>
+											<ChildItems>
+												<CheckBoxField name="ИспользоватьПроизвольныйАлгоритм" id="79">
+													<DataPath>ИспользоватьПроизвольныйАлгоритм</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Произвольный алгоритм</v8:content>
+														</v8:item>
+													</Title>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьПроизвольныйАлгоритмКонтекстноеМеню" id="80"/>
+													<ExtendedTooltip name="ИспользоватьПроизвольныйАлгоритмРасширеннаяПодсказка" id="81"/>
+												</CheckBoxField>
+												<Button name="ОткрытьРедакторКода" id="86">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ОткрытьРедакторКода</CommandName>
+													<ExtendedTooltip name="ОткрытьРедакторКодаРасширеннаяПодсказка" id="87"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаВидОбработки" id="84">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа вид обработки</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа вид обработки</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВидОбработкиРасширеннаяПодсказка" id="85"/>
+											<ChildItems>
+												<InputField name="ВидОбработки" id="40">
+													<DataPath>ВидОбработки</DataPath>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Очистить РС</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Очистить</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Удалить записи РС по отбору</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">УдалитьПоОтбору</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Создать запись РС</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">СоздатьЗапись</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Изменить записи РС по отбору</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">ИзменитьПоОтбору</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ВидОбработкиКонтекстноеМеню" id="41"/>
+													<ExtendedTooltip name="ВидОбработкиРасширеннаяПодсказка" id="42"/>
+												</InputField>
+												<Button name="ВыполнитьОбработку" id="45">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
+													<ExtendedTooltip name="ВыполнитьОбработкуРасширеннаяПодсказка" id="46"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
 								<UsualGroup name="ГруппаОпцииОбработки" id="82">
 									<Title>
 										<v8:item>
@@ -63,12 +299,12 @@
 											<v8:content>Группа опции обработки</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Horizontal</Group>
+									<Group>Vertical</Group>
 									<Representation>None</Representation>
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаОпцииОбработкиРасширеннаяПодсказка" id="83"/>
 									<ChildItems>
-										<CheckBoxField name="РежиЗагрузки" id="53">
+										<CheckBoxField name="РежимЗагрузки" id="53">
 											<DataPath>ОбменДаннымиЗагрузка</DataPath>
 											<Title>
 												<v8:item>
@@ -77,111 +313,9 @@
 												</v8:item>
 											</Title>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="РежиЗагрузкиКонтекстноеМеню" id="54"/>
-											<ExtendedTooltip name="РежиЗагрузкиРасширеннаяПодсказка" id="55"/>
+											<ContextMenu name="РежимЗагрузкиКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="РежимЗагрузкиРасширеннаяПодсказка" id="55"/>
 										</CheckBoxField>
-										<CheckBoxField name="ИспользоватьПроизвольныйАлгоритм" id="79">
-											<DataPath>ИспользоватьПроизвольныйАлгоритм</DataPath>
-											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Произвольный алгоритм</v8:content>
-												</v8:item>
-											</Title>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ИспользоватьПроизвольныйАлгоритмКонтекстноеМеню" id="80"/>
-											<ExtendedTooltip name="ИспользоватьПроизвольныйАлгоритмРасширеннаяПодсказка" id="81"/>
-										</CheckBoxField>
-										<Button name="ОткрытьРедакторКода" id="86">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.ОткрытьРедакторКода</CommandName>
-											<ExtendedTooltip name="ОткрытьРедакторКодаРасширеннаяПодсказка" id="87"/>
-										</Button>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаВидОбработки" id="84">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа вид обработки</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа вид обработки</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Horizontal</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаВидОбработкиРасширеннаяПодсказка" id="85"/>
-									<ChildItems>
-										<InputField name="ВидОбработки" id="40">
-											<DataPath>ВидОбработки</DataPath>
-											<ListChoiceMode>true</ListChoiceMode>
-											<ChoiceList>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Очистить</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">Очистить</Value>
-													</xr:Value>
-												</xr:Item>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Удалить по отбору</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">УдалитьПоОтбору</Value>
-													</xr:Value>
-												</xr:Item>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Создать запись</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">СоздатьЗапись</Value>
-													</xr:Value>
-												</xr:Item>
-												<xr:Item>
-													<xr:Presentation/>
-													<xr:CheckState>0</xr:CheckState>
-													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Изменить по отбору</v8:content>
-															</v8:item>
-														</Presentation>
-														<Value xsi:type="xs:string">ИзменитьПоОтбору</Value>
-													</xr:Value>
-												</xr:Item>
-											</ChoiceList>
-											<ContextMenu name="ВидОбработкиКонтекстноеМеню" id="41"/>
-											<ExtendedTooltip name="ВидОбработкиРасширеннаяПодсказка" id="42"/>
-										</InputField>
-										<Button name="ВыполнитьОбработку" id="45">
-											<Type>UsualButton</Type>
-											<CommandName>Form.Command.ВыполнитьОбработку</CommandName>
-											<ExtendedTooltip name="ВыполнитьОбработкуРасширеннаяПодсказка" id="46"/>
-										</Button>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -191,7 +325,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Отборы</v8:content>
+									<v8:content>Отбор</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -311,21 +445,6 @@
 								</Table>
 							</ChildItems>
 						</UsualGroup>
-						<CommandBar name="ГруппаПрочиеКоманды" id="49">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа прочие команды</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа прочие команды</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ExtendedTooltip name="ГруппаПрочиеКомандыРасширеннаяПодсказка" id="50"/>
-						</CommandBar>
 						<UsualGroup name="ГруппаСвойства" id="47">
 							<Title>
 								<v8:item>
@@ -340,6 +459,14 @@
 								</v8:item>
 							</ToolTip>
 							<Group>Vertical</Group>
+							<Behavior>Collapsible</Behavior>
+							<CollapsedRepresentationTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Свойства</v8:content>
+								</v8:item>
+							</CollapsedRepresentationTitle>
+							<ControlRepresentation>Picture</ControlRepresentation>
 							<BackColor>web:MintCream</BackColor>
 							<ExtendedTooltip name="ГруппаСвойстваРасширеннаяПодсказка" id="48"/>
 							<ChildItems>
@@ -606,6 +733,40 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ДинамическийСписокРС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Динамический список РС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	"" КАК РСНеВыбран</QueryText>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьПоТекущейСтроке" id="1">
@@ -728,6 +889,66 @@
 			</Picture>
 			<Action>ИспользоватьВсеВыключить</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыгрузитьВXML" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в XML все записи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить ВXML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВXML</Action>
+		</Command>
+		<Command name="ЗагрузитьИзXML" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из XML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из XML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзXML</Action>
+		</Command>
+		<Command name="ВыгрузитьВXMLПоОтбору" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в XML записи по отбору</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить ВXMLПо отбору</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВXMLПоОтбору</Action>
+		</Command>
+		<Command name="ОтчетПоДаннымРегистра" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по данным регистра</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по данным регистра</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетПоДаннымРегистра</Action>
 		</Command>
 	</Commands>
 </Form>

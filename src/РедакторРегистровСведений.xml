@@ -16,7 +16,7 @@
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Ркдактор регистров сведений v 0.1.2</v8:content>
+					<v8:content>Редактор регистров сведений v2200901</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -26,6 +26,8 @@
 		<ChildObjects>
 			<Form>Форма</Form>
 			<Form>ФормаРедакторКода</Form>
+			<Form>ФормаЗначениеХранилища</Form>
+			<Form>ФормаОтчетПоДанным</Form>
 		</ChildObjects>
 	</ExternalDataProcessor>
 </MetaDataObject>

@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoTitle>false</AutoTitle>
+	<Customizable>false</Customizable>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="ДвоичныеДанные" id="11">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Двоичные данные</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Двоичные данные</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ДвоичныеДанныеРасширеннаяПодсказка" id="12"/>
+				<ChildItems>
+					<Button name="ФормаЗагрузитьДвоичныеДанные" id="1">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьДвоичныеДанные</CommandName>
+						<ExtendedTooltip name="ФормаЗагрузитьДвоичныеДанныеРасширеннаяПодсказка" id="2"/>
+					</Button>
+					<Button name="ФормаСохранитьДвоичныеДанные" id="3">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьДвоичныеДанные</CommandName>
+						<ExtendedTooltip name="ФормаСохранитьДвоичныеДанныеРасширеннаяПодсказка" id="4"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+			<Popup name="ДанныеXML" id="13">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Данные XML</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Данные XML</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ДанныеXMLРасширеннаяПодсказка" id="14"/>
+				<ChildItems>
+					<Button name="ФормаВыгрузитьВXML" id="15">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ВыгрузитьВXML</CommandName>
+						<ExtendedTooltip name="ФормаВыгрузитьВXMLРасширеннаяПодсказка" id="16"/>
+					</Button>
+					<Button name="ФормаЗагрузитьИзXML" id="19">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьИзXML</CommandName>
+						<ExtendedTooltip name="ФормаЗагрузитьИзXMLРасширеннаяПодсказка" id="20"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="21">
+			<EnableContentChange>true</EnableContentChange>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="22"/>
+			<ChildItems>
+				<LabelField name="ТипЗначенияВХранилищеСтрока" id="5">
+					<DataPath>ТипЗначенияВХранилищеСтрока</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<SkipOnInput>true</SkipOnInput>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип значения в хранилище</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТипЗначенияВХранилищеСтрокаКонтекстноеМеню" id="6"/>
+					<ExtendedTooltip name="ТипЗначенияВХранилищеСтрокаРасширеннаяПодсказка" id="7"/>
+				</LabelField>
+				<Button name="ФормаКомандаОткрытьЗначение" id="17">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОткрытьЗначение</CommandName>
+					<ExtendedTooltip name="ФормаКомандаОткрытьЗначениеРасширеннаяПодсказка" id="18"/>
+				</Button>
+				<Button name="ПросмотрЗначенияВXML" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПросмотрЗначенияВXML</CommandName>
+					<ExtendedTooltip name="ПросмотрЗначенияВXMLРасширеннаяПодсказка" id="24"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ПроизвольноеЗначение" id="8">
+			<DataPath>ПроизвольноеЗначение</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поместить произвольное значение</v8:content>
+				</v8:item>
+			</Title>
+			<ChoiceButton>true</ChoiceButton>
+			<ClearButton>true</ClearButton>
+			<ContextMenu name="ПроизвольноеЗначениеКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="ПроизвольноеЗначениеРасширеннаяПодсказка" id="10"/>
+			<Events>
+				<Event name="OnChange">ПроизвольноеЗначениеПриИзменении</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.РедактроРегистровСведений</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВходныеПараметры" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Входные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ТипЗначенияВХранилищеСтрока" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип значения в хранилище строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПроизвольноеЗначение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произвольное значение</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьДвоичныеДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить двоичные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить двоичные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьДвоичныеДанные</Action>
+		</Command>
+		<Command name="ВыгрузитьДвоичныеДанные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить двоичные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить двоичные данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьДвоичныеДанные</Action>
+		</Command>
+		<Command name="ЗагрузитьИзXML" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из XML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из XML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьИзXML</Action>
+		</Command>
+		<Command name="ВыгрузитьВXML" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить в XML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить ВXML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыгрузитьВXML</Action>
+		</Command>
+		<Command name="КомандаОткрытьЗначение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть значение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть значение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОткрытьЗначение</Action>
+		</Command>
+		<Command name="ПросмотрЗначенияВXML" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр значения в XML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Просмотр значения ВXML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПросмотрЗначенияВXML</Action>
+		</Command>
+	</Commands>
+</Form>
