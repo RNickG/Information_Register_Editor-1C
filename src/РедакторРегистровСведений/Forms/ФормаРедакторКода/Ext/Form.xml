@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<Events>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
@@ -7,8 +7,25 @@
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
-		<LabelDecoration name="Инструкция" id="4">
+		<LabelDecoration name="ИнструкцияХранилище" id="7">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использование: Значение = ...
+Выполняется на сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИнструкцияХранилищеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИнструкцияХранилищеРасширеннаяПодсказка" id="9"/>
+		</LabelDecoration>
+		<LabelDecoration name="ИнструкцияОбработка" id="4">
+			<Visible>false</Visible>
+			<AutoMaxWidth>false</AutoMaxWidth>
 			<Height>2</Height>
+			<HorizontalStretch>true</HorizontalStretch>
 			<Title formatted="false">
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -16,8 +33,8 @@
 Выполняется для каждой записи из набора по условиям отбора.</v8:content>
 				</v8:item>
 			</Title>
-			<ContextMenu name="ИнструкцияКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ИнструкцияРасширеннаяПодсказка" id="6"/>
+			<ContextMenu name="ИнструкцияОбработкаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИнструкцияОбработкаРасширеннаяПодсказка" id="6"/>
 		</LabelDecoration>
 		<InputField name="Алгоритм" id="1">
 			<DataPath>Алгоритм</DataPath>
